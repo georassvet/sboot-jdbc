@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/createAccount}" th:object="${bankAccountInfo}" method="POST">
+    <input type="text" th:field="*{id}">
+    <input type="text" th:field="*{fullName}">
+    <input type="text" th:field="*{balance}">
+    <input type="submit" th:value="Отправить">
+</form>
+</body>
+</html>

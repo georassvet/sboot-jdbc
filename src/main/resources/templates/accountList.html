@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/site.css}">
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="/_menu"></th:block>
+<div th:text="${dateTime}"></div>
+
+<ul>
+    <li th:each="acc : ${accountList}">
+        <span th:utext="${acc.fullName}"></span>
+        <span th:utext="${acc.balance}"></span>
+    </li>
+</ul>
+
+</body>
+</html>
